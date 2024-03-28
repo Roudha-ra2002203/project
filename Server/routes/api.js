@@ -35,5 +35,55 @@ router.post('/items', (req, res) => {
     res.status(201).json(newItem);
 });
 
+// users endpoints 
+router.get('/users', (req, res) => {
+    const users = getUsers();
+    res.json(users);
+});
+
+
+router.post('/users', (req, res) => {
+    const newUser = req.body;
+    const users = getUsers();
+    newUser.id = (users.length + 1).toString(); // Assign a new unique ID
+    users.push(newUser);
+    saveUsers(users);
+    res.status(201).json(newUser);
+});
+
+// Users Endpoints
+router.get('/users', (req, res) => {
+    const users = getUsers();
+    res.json(users);
+});
+
+
+router.post('/users', (req, res) => {
+    const newUser = req.body;
+    const users = getUsers();
+    newUser.id = (users.length + 1).toString(); // Assign a new unique ID
+    users.push(newUser);
+    saveUsers(users);
+    res.status(201).json(newUser);
+});
+
+//Purchase Endpoint
+router.post('/purchase', (req, res) => {
+    const { userId, itemId, quantity } = req.body;
+
+    //Retrieve item data from the database
+    const items = getItems();
+    const itemIndex = items.findIndex(item => item.id === itemId);
+    if (itemIndex === -1) {
+        return res.status(404).json({ message: 'Item not found' });
+    }
+    const item = items[itemIndex];
+
+    // Check if requested quantity is available
+    if (item.quantity < quantity) {
+        return res.status(400).json({ message: 'Insufficient quantity available' });
+    }
+})
+
 
 module.exports = router;
