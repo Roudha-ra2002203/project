@@ -83,7 +83,60 @@ router.post('/purchase', (req, res) => {
     if (item.quantity < quantity) {
         return res.status(400).json({ message: 'Insufficient quantity available' });
     }
-})
+
+     // Calculate total cost
+     const totalPrice = quantity * item.price;
+
+     // Check if user has enough balance
+     if (user.balance < totalPrice) {
+         return res.status(400).json({ message: 'Insufficient balance' });
+     }
+ 
+     // Decrease item quantity
+     item.quantity -= quantity;
+ 
+     // Add sale to item's sale history
+     if (!item.saleHistory) {
+         item.saleHistory = [];
+    }
+
+    // Retrieve seller username from sellerId
+    const seller = users.find(u => u.id === item.sellerId);
+    const sellerUsername = seller ? seller.username : "Unknown Seller";
+
+    const sale = {
+        buyerId: user.id,
+        buyerUsername: user.username,
+        sellerUsername: sellerUsername,
+        quantity,
+        totalPrice,
+        date: new Date().toISOString()
+    };
+    item.saleHistory.push(sale);
+
+    // Update user balance
+    user.balance -= totalPrice;
+
+    // Add purchase to user's purchase history
+    const purchase = {
+        itemId: item.id,
+        itemName: item.name,
+        quantity,
+        totalPrice,
+        date: new Date().toISOString()
+    };
+    if (!user.purchaseHistory) {
+        user.purchaseHistory = [];
+    }
+    user.purchaseHistory.push(purchase);
+
+    // Save changes to database
+    saveItems(items);
+    saveUsers(users);
+
+    res.status(200).json({ message: 'Purchase successful', user});
+
+});
 
 
 module.exports = router;
