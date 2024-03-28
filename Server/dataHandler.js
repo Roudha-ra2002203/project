@@ -30,6 +30,10 @@ const saveUsers = (users) => {
     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
 };
 
+const saveItems = (items) => {
+    fs.writeFileSync(itemsFilePath, JSON.stringify(items, null, 2));
+};
+
 
 
 //
