@@ -21,7 +21,7 @@ router.post('/login', (req, res) => {
 });
 
 // Items Endpoints
-router.get('/items', (req, res) =>{
+router.get('/items', (req, res) => {
     const items = getItems();
      res.json(items);
 });
@@ -33,22 +33,6 @@ router.post('/items', (req, res) => {
     items.push(newItem);
     saveItems(items);
     res.status(201).json(newItem);
-});
-
-// users endpoints 
-router.get('/users', (req, res) => {
-    const users = getUsers();
-    res.json(users);
-});
-
-
-router.post('/users', (req, res) => {
-    const newUser = req.body;
-    const users = getUsers();
-    newUser.id = (users.length + 1).toString(); // Assign a new unique ID
-    users.push(newUser);
-    saveUsers(users);
-    res.status(201).json(newUser);
 });
 
 // Users Endpoints
@@ -67,11 +51,19 @@ router.post('/users', (req, res) => {
     res.status(201).json(newUser);
 });
 
-//Purchase Endpoint
+// Purchase Endpoint
 router.post('/purchase', (req, res) => {
     const { userId, itemId, quantity } = req.body;
 
-    //Retrieve item data from the database
+    // Retrieve user data from the database
+    const users = getUsers();
+    const userIndex = users.findIndex(user => user.id === userId);
+    if (userIndex === -1) {
+        return res.status(404).json({ message: 'User not found' });
+    }
+    const user = users[userIndex];
+
+    // Retrieve item data from the database
     const items = getItems();
     const itemIndex = items.findIndex(item => item.id === itemId);
     if (itemIndex === -1) {
@@ -84,22 +76,22 @@ router.post('/purchase', (req, res) => {
         return res.status(400).json({ message: 'Insufficient quantity available' });
     }
 
-     // Calculate total cost
-     const totalPrice = quantity * item.price;
+    // Calculate total cost
+    const totalPrice = quantity * item.price;
 
-     // Check if user has enough balance
-     if (user.balance < totalPrice) {
-         return res.status(400).json({ message: 'Insufficient balance' });
-     }
- 
-     // Decrease item quantity
-     item.quantity -= quantity;
- 
-     // Add sale to item's sale history
-     if (!item.saleHistory) {
-         item.saleHistory = [];
+    // Check if user has enough balance
+    if (user.balance < totalPrice) {
+        return res.status(400).json({ message: 'Insufficient balance' });
     }
 
+    // Decrease item quantity
+    item.quantity -= quantity;
+
+    // Add sale to item's sale history
+    if (!item.saleHistory) {
+        item.saleHistory = [];
+    }
+    
     // Retrieve seller username from sellerId
     const seller = users.find(u => u.id === item.sellerId);
     const sellerUsername = seller ? seller.username : "Unknown Seller";
@@ -134,8 +126,7 @@ router.post('/purchase', (req, res) => {
     saveItems(items);
     saveUsers(users);
 
-    res.status(200).json({ message: 'Purchase successful', user});
-
+    res.status(200).json({ message: 'Purchase successful', user });
 });
 
 
