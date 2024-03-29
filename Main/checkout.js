@@ -10,6 +10,12 @@ document.getElementById('purchase-form').addEventListener('submit', function(e) 
     // Retrieve user data from local storage
     let currentUser = JSON.parse(localStorage.getItem('current_user'));
 
+     // Check if currentUser is null, redirect to login.html if not logged in
+     if (!currentUser) {
+        window.location.href = 'login.html';
+        return;
+    }
+    
     // Check if selectedItem is not null and has all necessary properties
     if (selectedItem && selectedItem.price && quantity) {
         // Calculate total cost based on item price and quantity
