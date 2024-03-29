@@ -101,9 +101,8 @@ router.post('/purchase', (req, res) => {
    
 
     const sale = {
-        buyerId: user.id,
         buyerUsername: user.username,
-        sellerUsername: sellerUsername,
+        sellerUsername: seller.username,
         quantity,
         totalPrice,
         date: new Date().toISOString()
