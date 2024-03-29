@@ -57,7 +57,9 @@ router.post('/purchase', (req, res) => {
 
     // Retrieve user data from the database
     const users = getUsers();
-    const userIndex = users.findIndex(user => user.id === userId);
+    const sellers = getSellers();
+
+    const userIndex = users.findIndex(user => user.username === username);
     if (userIndex === -1) {
         return res.status(404).json({ message: 'User not found' });
     }
@@ -70,6 +72,8 @@ router.post('/purchase', (req, res) => {
         return res.status(404).json({ message: 'Item not found' });
     }
     const item = items[itemIndex];
+    console.log(user)
+    console.log(item)
 
     // Check if requested quantity is available
     if (item.quantity < quantity) {
@@ -93,8 +97,8 @@ router.post('/purchase', (req, res) => {
     }
     
     // Retrieve seller username from sellerId
-    const seller = users.find(u => u.id === item.sellerId);
-    const sellerUsername = seller ? seller.username : "Unknown Seller";
+    const seller = sellers.find(u => u.id == item.sellerId);
+   
 
     const sale = {
         buyerId: user.id,
