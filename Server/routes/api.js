@@ -99,7 +99,7 @@ router.post('/purchase', (req, res) => {
     // Retrieve seller username from sellerId
     const seller = sellers.find(u => u.id == item.sellerId);
    
-
+  //edited
     const sale = {
         buyerUsername: user.username,
         sellerUsername: seller.username,
