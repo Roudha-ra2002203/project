@@ -125,5 +125,13 @@
     "sellerId": "101",
     "imageUrl": "https://www.bugatti-fashion.com/media/bug_magazin_ratgeber_slim-jeans2280x1200.jpg",
     "id": "8"
+  },
+  {
+    "name": "Whoop watch",
+    "price": 345,
+    "quantity": 4,
+    "sellerId": "101",
+    "imageUrl": "https://www.tamimiprojects.com/cdn/shop/files/71CQ6esBqFL-PhotoRoom_700x700.png?v=1705631463",
+    "id": "8"
   }
 ]
