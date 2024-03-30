@@ -14,9 +14,11 @@ document.getElementById('login-form').addEventListener('submit', function(e) {
     })
     .then(response => {
         if (response.ok) {
+            alert('successful login')
             return response.json();
         } else {
-            throw new Error('Invalid username or password');
+           // throw new Error('Invalid username or password');
+           alert('Invalid username or password')
         }
     })
     .then(data => {
