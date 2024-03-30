@@ -15,7 +15,7 @@ document.getElementById('purchase-form').addEventListener('submit', function(e) 
         window.location.href = 'login.html';
         return;
     }
-    
+
     // Check if selectedItem is not null and has all necessary properties
     if (selectedItem && selectedItem.price && quantity) {
         // Calculate total cost based on item price and quantity
@@ -25,7 +25,7 @@ document.getElementById('purchase-form').addEventListener('submit', function(e) 
         if (currentUser && currentUser.balance >= totalPrice) {
             // Prepare data for the request
             const data = {
-                userId: currentUser.id,
+                username: currentUser.username,
                 itemId: selectedItem.id,
                 quantity: quantity
             };
