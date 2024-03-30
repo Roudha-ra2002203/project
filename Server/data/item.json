@@ -5,16 +5,7 @@
     "price": 20,
     "quantity": 0,
     "sellerId": "101",
-    "imageUrl": "https://uniworthdress.com/uploads/product/FS1456RF..jpg",
-    "saleHistory": [
-      {
-        "buyerUsername": "nouf_Alkaabi",
-        "sellerUsername": "Unknown Seller",
-        "quantity": 2,
-        "totalPrice": 40,
-        "date": "2024-03-06T12:04:42.962Z"
-      }
-    ]
+    "imageUrl": "https://uniworthdress.com/uploads/product/FS1456RF..jpg"
   },
   {
     "id": "2",
@@ -22,59 +13,29 @@
     "price": 35,
     "quantity": 1,
     "sellerId": "102",
-    "imageUrl": "https://thedenimcompany.pk/cdn/shop/products/50.jpg?v=1661433754",
-    "saleHistory": [
-      {
-        "buyerUsername": "nouf_Alkaabi",
-        "sellerUsername": "Unknown Seller",
-        "quantity": 2,
-        "totalPrice": 70,
-        "date": "2024-03-15T16:31:17.884Z"
-      },
-      {
-        "buyerUsername": "nouf_Alkaabi",
-        "sellerUsername": "Unknown Seller",
-        "quantity": 2,
-        "totalPrice": 70,
-        "date": "2024-03-17T13:33:53.246Z"
-      },
-      {
-        "buyerUsername": "na2002196",
-        "sellerUsername": "Unknown Seller",
-        "quantity": 1,
-        "totalPrice": 35,
-        "date": "2024-03-29T00:56:00.228Z"
-      }
-    ]
+    "imageUrl": "https://thedenimcompany.pk/cdn/shop/products/50.jpg?v=1661433754"
   },
   {
     "id": "3",
     "name": "Black Hoodie",
     "price": 45,
-    "quantity": 12,
+    "quantity": 10,
     "sellerId": "101",
     "imageUrl": "https://www.hallensteins.com/content/products/ab-organic-hooded-sweat-black-front-10002786.jpg",
     "saleHistory": [
       {
-        "buyerUsername": "nouf_Alkaabi",
-        "sellerUsername": "Unknown Seller",
-        "quantity": 2,
-        "totalPrice": 90,
-        "date": "2024-03-05T23:07:01.544Z"
-      },
-      {
-        "buyerUsername": "nouf_Alkaabi",
-        "sellerUsername": "Unknown Seller",
+        "buyerUsername": "ra2002203",
+        "sellerUsername": "seller1",
         "quantity": 1,
         "totalPrice": 45,
-        "date": "2024-03-18T17:08:10.016Z"
+        "date": "2024-03-30T06:50:24.585Z"
       },
       {
-        "buyerUsername": "na2002196",
-        "sellerUsername": "Unknown Seller",
-        "quantity": 2,
-        "totalPrice": 90,
-        "date": "2024-03-29T00:56:06.233Z"
+        "buyerUsername": "ra2002203",
+        "sellerUsername": "seller1",
+        "quantity": 1,
+        "totalPrice": 45,
+        "date": "2024-03-30T06:55:03.662Z"
       }
     ]
   },
@@ -92,23 +53,7 @@
     "imageUrl": "https://uniworthdress.com/uploads/product/JK2300-1..jpg",
     "price": 50,
     "quantity": 5,
-    "sellerId": "101",
-    "saleHistory": [
-      {
-        "buyerUsername": "nouf_Alkaabi",
-        "sellerUsername": "seller1",
-        "quantity": 1,
-        "totalPrice": 50,
-        "date": "2024-03-05T22:50:47.394Z"
-      },
-      {
-        "buyerUsername": "nouf_Alkaabi",
-        "sellerUsername": "Unknown Seller",
-        "quantity": 2,
-        "totalPrice": 100,
-        "date": "2024-03-06T14:15:32.139Z"
-      }
-    ]
+    "sellerId": "101"
   },
   {
     "id": "6",
@@ -124,7 +69,7 @@
     "quantity": 23,
     "sellerId": "101",
     "imageUrl": "https://www.bugatti-fashion.com/media/bug_magazin_ratgeber_slim-jeans2280x1200.jpg",
-    "id": "8"
+    "id": "7"
   },
   {
     "name": "Whoop watch",
@@ -133,5 +78,22 @@
     "sellerId": "101",
     "imageUrl": "https://www.tamimiprojects.com/cdn/shop/files/71CQ6esBqFL-PhotoRoom_700x700.png?v=1705631463",
     "id": "8"
+  },
+  {
+    "name": "ON Shoes",
+    "price": 560,
+    "quantity": 4,
+    "sellerId": "101",
+    "imageUrl": "https://images-cdn.ubuy.qa/63511cf50cbf93689f5e52bd-men-039-s-on-cloud-5-running-shoes-4.jpg",
+    "id": "9",
+    "saleHistory": [
+      {
+        "buyerUsername": "ha2002417",
+        "sellerUsername": "seller1",
+        "quantity": 1,
+        "totalPrice": 560,
+        "date": "2024-03-30T06:54:22.982Z"
+      }
+    ]
   }
 ]

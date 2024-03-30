@@ -2,200 +2,43 @@
   {
     "name": "Noof",
     "surname": "Alkaabi",
-    "shipping_address": "123 Main St, City, Country",
+    "shipping_address": "Qatar",
     "username": "na2002196",
     "password": "2002196",
-    "balance": 1445,
-    "purchaseHistory": [
-      {
-        "itemId": "1",
-        "quantity": 10,
-        "totalPrice": 200,
-        "date": "2024-03-04T23:28:17.988Z"
-      },
-      {
-        "itemId": "1",
-        "quantity": 12,
-        "totalPrice": 240,
-        "date": "2024-03-04T23:53:41.644Z"
-      },
-      {
-        "itemId": "1",
-        "quantity": 1,
-        "totalPrice": 20,
-        "date": "2024-03-04T23:53:54.535Z"
-      },
-      {
-        "itemId": "1",
-        "quantity": 2,
-        "totalPrice": 40,
-        "date": "2024-03-04T23:57:03.648Z"
-      },
-      {
-        "itemId": "1",
-        "quantity": 2,
-        "totalPrice": 40,
-        "date": "2024-03-04T23:58:04.961Z"
-      },
-      {
-        "itemId": "1",
-        "quantity": 2,
-        "totalPrice": 40,
-        "date": "2024-03-04T23:58:40.979Z"
-      },
-      {
-        "itemId": "1",
-        "quantity": 3,
-        "totalPrice": 60,
-        "date": "2024-03-05T00:00:53.753Z"
-      },
-      {
-        "itemId": "1",
-        "quantity": 12,
-        "totalPrice": 240,
-        "date": "2024-03-05T00:01:47.972Z"
-      },
-      {
-        "itemId": "1",
-        "quantity": 2,
-        "totalPrice": 40,
-        "date": "2024-03-05T00:01:57.296Z"
-      },
-      {
-        "itemId": "1",
-        "quantity": 2,
-        "totalPrice": 40,
-        "date": "2024-03-05T00:02:51.325Z"
-      },
-      {
-        "itemId": "2",
-        "quantity": 23,
-        "totalPrice": 805,
-        "date": "2024-03-05T00:09:27.228Z"
-      },
-      {
-        "itemId": "5",
-        "quantity": 12,
-        "totalPrice": 600,
-        "date": "2024-03-05T00:10:40.597Z"
-      },
-      {
-        "itemId": "3",
-        "quantity": 7,
-        "totalPrice": 315,
-        "date": "2024-03-05T08:34:24.337Z"
-      },
-      {
-        "itemId": "4",
-        "quantity": 1,
-        "totalPrice": 30,
-        "date": "2024-03-05T14:24:01.285Z"
-      },
-      {
-        "itemId": "2",
-        "quantity": 1,
-        "totalPrice": 35,
-        "date": "2024-03-05T21:45:25.114Z"
-      },
-      {
-        "itemId": "3",
-        "quantity": 1,
-        "totalPrice": 45,
-        "date": "2024-03-05T22:50:04.451Z"
-      },
-      {
-        "itemId": "5",
-        "itemName": "Denim Jacket",
-        "quantity": 1,
-        "totalPrice": 50,
-        "date": "2024-03-05T22:50:47.394Z"
-      },
-      {
-        "itemId": "3",
-        "itemName": "Black Hoodie",
-        "quantity": 2,
-        "totalPrice": 90,
-        "date": "2024-03-05T23:07:01.544Z"
-      },
-      {
-        "itemId": "1",
-        "itemName": "Red T-shirt",
-        "quantity": 2,
-        "totalPrice": 40,
-        "date": "2024-03-06T12:04:42.962Z"
-      },
-      {
-        "itemId": "11",
-        "itemName": "Mobile",
-        "quantity": 1,
-        "totalPrice": 125,
-        "date": "2024-03-06T12:24:36.389Z"
-      },
-      {
-        "itemId": "5",
-        "itemName": "Denim Jacket",
-        "quantity": 2,
-        "totalPrice": 100,
-        "date": "2024-03-06T14:15:32.140Z"
-      },
-      {
-        "itemId": "12",
-        "itemName": "bat",
-        "quantity": 1,
-        "totalPrice": 10,
-        "date": "2024-03-06T14:17:25.569Z"
-      },
-      {
-        "itemId": "2",
-        "itemName": "Blue Jeans",
-        "quantity": 2,
-        "totalPrice": 70,
-        "date": "2024-03-15T16:31:17.884Z"
-      },
-      {
-        "itemId": "2",
-        "itemName": "Blue Jeans",
-        "quantity": 2,
-        "totalPrice": 70,
-        "date": "2024-03-17T13:33:53.246Z"
-      },
-      {
-        "itemId": "3",
-        "itemName": "Black Hoodie",
-        "quantity": 1,
-        "totalPrice": 45,
-        "date": "2024-03-18T17:08:10.017Z"
-      },
-      {
-        "itemId": "2",
-        "itemName": "Blue Jeans",
-        "quantity": 1,
-        "totalPrice": 35,
-        "date": "2024-03-29T00:56:00.228Z"
-      },
-      {
-        "itemId": "3",
-        "itemName": "Black Hoodie",
-        "quantity": 2,
-        "totalPrice": 90,
-        "date": "2024-03-29T00:56:06.233Z"
-      }
-    ]
+    "balance": 1445
   },
   {
     "name": "Haya",
     "surname": "alsubaey",
-    "shipping_address": "456 Elm St, Town, Country",
+    "shipping_address": "AlWajba",
     "username": "ha2002417",
     "password": "2002417",
-    "balance": 1500
+    "balance": 12940,
+    "purchaseHistory": [
+      {
+        "itemId": "9",
+        "itemName": "ON Shoes",
+        "quantity": 1,
+        "totalPrice": 560,
+        "date": "2024-03-30T06:54:22.982Z"
+      }
+    ]
   },
   {
     "name": "Roudha",
     "surname": "alkhalaf",
-    "shipping_address": "789 Oak St, Village, Country",
+    "shipping_address": "Doha",
     "username": "ra2002203",
     "password": "2002203",
-    "balance": 2000
+    "balance": 155,
+    "purchaseHistory": [
+      {
+        "itemId": "3",
+        "itemName": "Black Hoodie",
+        "quantity": 1,
+        "totalPrice": 45,
+        "date": "2024-03-30T06:55:03.662Z"
+      }
+    ]
   }
 ]

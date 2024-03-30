@@ -77,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .then(response => response.json())
             .then(data => {
+                alert('item added successfully');
                 // Refresh page to display updated item list
                 location.reload();
             })

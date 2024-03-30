@@ -41,7 +41,6 @@ router.get('/users', (req, res) => {
     res.json(users);
 });
 
-
 router.post('/users', (req, res) => {
     const newUser = req.body;
     const users = getUsers();
@@ -53,13 +52,13 @@ router.post('/users', (req, res) => {
 
 // Purchase Endpoint
 router.post('/purchase', (req, res) => {
-    const { userId, itemId, quantity } = req.body;
-
+    const { username, itemId, quantity } = req.body;
+console.log(username,itemId)
     // Retrieve user data from the database
     const users = getUsers();
-    const sellers = getSellers();
-
-    const userIndex = users.findIndex(user => user.username === username);
+    const sellers = getSellers()
+    
+    const userIndex = users.findIndex(user => user.username == username);
     if (userIndex === -1) {
         return res.status(404).json({ message: 'User not found' });
     }
@@ -67,7 +66,7 @@ router.post('/purchase', (req, res) => {
 
     // Retrieve item data from the database
     const items = getItems();
-    const itemIndex = items.findIndex(item => item.id === itemId);
+    const itemIndex = items.findIndex(item => item.id == itemId);
     if (itemIndex === -1) {
         return res.status(404).json({ message: 'Item not found' });
     }
@@ -98,8 +97,8 @@ router.post('/purchase', (req, res) => {
     
     // Retrieve seller username from sellerId
     const seller = sellers.find(u => u.id == item.sellerId);
-   
-  //edited
+    
+
     const sale = {
         buyerUsername: user.username,
         sellerUsername: seller.username,
@@ -131,6 +130,5 @@ router.post('/purchase', (req, res) => {
 
     res.status(200).json({ message: 'Purchase successful', user });
 });
-
 
 module.exports = router;
