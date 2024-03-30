@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
           data.forEach(item => {
               const listItem = document.createElement('li');
-              listItem.textContent = `${item.name} - Price: ${item.price} QAR`;
+              if(item.sellerId==sellerId){
+                listItem.textContent = `${item.name} - Price: ${item.price} QAR`;
 
               // Display sale history for all items
               if (item.saleHistory && item.saleHistory.length > 0) {
@@ -38,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   // Item has been sold
                   soldItemsList.appendChild(listItem);
               }
+            }
           });
       })
       .catch(error => console.error('Error fetching items:', error));
@@ -80,5 +82,4 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => console.error('Error uploading item:', error));
         });
-
 });
