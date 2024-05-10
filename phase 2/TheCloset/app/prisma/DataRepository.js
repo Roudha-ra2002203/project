@@ -76,14 +76,13 @@ class DataHandler {
           productId: true,
         },
       });
+      console.log(purchasedItems)
       const purchasedItemIds = new Set(
-        purchasedItems.map((item) => item.itemId)
+        purchasedItems.map((item) => item.productId)
       );
-      console.log(purchasedItemIds)
       const itemsNeverPurchased = allItems.filter(
         (item) => !purchasedItemIds.has(item.id)
       );
-      console.log("never ",itemsNeverPurchased)
       return itemsNeverPurchased;
     } catch (error) {
       throw new Error("Error fetching items never purchased: " + error.message);
