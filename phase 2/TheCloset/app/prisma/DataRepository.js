@@ -4,23 +4,22 @@ class DataHandler {
   constructor() {
     this.client = new PrismaClient();
   }
-  async getHighestItemId() {
-    
+  async  getHighestItemId() {
     try {
       const items = await this.getItems();
+      console.log(items);
       if (items.length === 0) {
         throw new Error('No items found');
       }
       // Find the item with the highest ID
       const highestItem = items.reduce((prev, current) => {
-        return prev.id > current.id ? prev : current;
+        return parseInt(prev.id) > parseInt(current.id) ? prev : current;
       });
       return highestItem.id;
     } catch (error) {
       throw new Error('Error fetching item with highest ID: ' + error.message);
     }
-  
-}
+  }
 
   async getLeastSellingProducts() {
     try {
